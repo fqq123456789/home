@@ -15,8 +15,8 @@ const { data } = await useFetch('/api/pageview')
     </h1>
 
     <div class="rounded bg-white px-4 py-2 dark:bg-dark">
+      <span>当前助力值：</span>
       <span class="text-hex-3498db">{{ data?.pageview }}</span>
-      <span> 人已经访问过这个页面</span>
     </div>
 
     <div class="flex gap-4">
