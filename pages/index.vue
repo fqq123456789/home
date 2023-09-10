@@ -5,22 +5,19 @@ function toggleDark() {
   color.preference = color.value === 'dark' ? 'light' : 'dark'
 }
 
-const count = ref(0)
-
-function increment() {
-  count.value++
-}
+const { data } = await useFetch('/api/pageview')
 </script>
 
 <template>
   <div class="h-full flex flex-col items-center justify-evenly">
     <h1 class="text-2xl font-bold">
-      点击下方按钮助力开发进度！
+      分享当前页面助力开发进度！
     </h1>
 
-    <button class="btn" @click="increment">
-      + {{ count }}
-    </button>
+    <div class="rounded bg-white px-4 py-2 dark:bg-dark">
+      <span class="text-hex-3498db">{{ data?.pageview }}</span>
+      <span> 人已经访问过这个页面</span>
+    </div>
 
     <div class="flex gap-4">
       <a
