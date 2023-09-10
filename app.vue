@@ -1,5 +1,11 @@
+<script setup lang="ts">
+useHead({
+  title: 'Guany 的首页',
+})
+</script>
+
 <template>
-  <div>
-    <NuxtWelcome />
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
