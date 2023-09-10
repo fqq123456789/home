@@ -11,14 +11,11 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "dependencies": {
-    "@nuxtjs/color-mode": "^3.3.0",
-    "@unocss/reset": "^0.55.7"
-  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.41.0",
     "@iconify/json": "^2.2.113",
     "@nuxt/devtools": "latest",
+    "@nuxtjs/color-mode": "^3.3.0",
     "@unocss/eslint-config": "^0.55.7",
     "@unocss/nuxt": "^0.55.7",
     "eslint": "^8.49.0",
