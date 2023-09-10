@@ -10,7 +10,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/color-mode',
     '@unocss/nuxt',
-    '@vueuse/nuxt',
   ],
   colorMode: {
     classSuffix: '',

@@ -1,10 +1,4 @@
 <script setup lang="ts">
-const color = useColorMode()
-
-function toggleDark() {
-  color.preference = color.value === 'dark' ? 'light' : 'dark'
-}
-
 const { data } = await useFetch('/api/pageview')
 </script>
 
