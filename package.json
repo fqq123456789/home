@@ -1,7 +1,7 @@
 {
   "name": "nuxt-app",
   "private": true,
-  "packageManager": "pnpm@8.7.4",
+  "packageManager": "pnpm@8.7.5",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -12,12 +12,13 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.41.0",
-    "@iconify/json": "^2.2.113",
+    "@antfu/eslint-config": "^0.41.2",
+    "@iconify/json": "^2.2.114",
     "@nuxt/devtools": "latest",
     "@nuxtjs/color-mode": "^3.3.0",
     "@unocss/eslint-config": "^0.55.7",
     "@unocss/nuxt": "^0.55.7",
+    "@vercel/kv": "latest",
     "eslint": "^8.49.0",
     "nuxt": "^3.7.1"
   }

@@ -1,17 +1,34 @@
 <script setup lang="ts">
-const { data } = await useFetch('/api/pageview')
+const count = ref(0)
+
+onMounted(() => {
+  initData()
+})
+
+async function initData() {
+  const res = await $fetch('/api/count')
+
+  count.value = res.count ?? 0
+}
+
+async function handleBtnClick() {
+  await $fetch('/api/count', {
+    method: 'POST',
+  })
+
+  initData()
+}
 </script>
 
 <template>
   <div class="h-full flex flex-col items-center justify-evenly">
     <h1 class="text-2xl font-bold">
-      分享当前页面助力开发进度！
+      点击下方按钮助力开发进度！
     </h1>
 
-    <div class="rounded bg-white px-4 py-2 dark:bg-dark">
-      <span>当前助力值：</span>
-      <span class="text-hex-3498db">{{ data?.pageview }}</span>
-    </div>
+    <button class="btn" @click="handleBtnClick">
+      当前助力值：{{ count }}
+    </button>
 
     <div class="flex gap-4">
       <a

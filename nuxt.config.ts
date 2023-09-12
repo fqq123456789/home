@@ -14,4 +14,9 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
+  nitro: {
+    storage: {
+      data: { driver: 'vercelKV' },
+    },
+  },
 })
